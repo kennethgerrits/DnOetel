@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Dn Oetel</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="../dist/bundle.js" defer></script>
+<link href="style.css" rel="stylesheet">
+
+<body class="page-content">
+<div class="d-flex justify-content-center">
+    <!--left row-->
+    <div class="col-3 background-lightblue">
+        <div class="d-flex flex-column ">
+
+            <div class="row">
+                <img class="img-fluid logo" width="100px" src="img/oetel.jpg" alt="logo_oetel">
+                <p class="display-4 my-auto">Dn Oetel</p>
+            </div>
+
+            <button id="clothing-btn" class="btn button btn-outline-primary select">Clothing</button>
+            <button id="tierlantin-btn" class="btn button btn-outline-primary select">Tierlantin</button>
+            <button id="decoration-btn" class="btn button btn-outline-primary select">Decoration</button>
+            <button id="create-item-btn" class="btn button btn-outline-primary select">New product</button>
+
+            <div class="dropdown" id="clothing-parent">
+                <button class="dropbtn">Clothings</button>
+                <div class="dropdown-content" id="clothing-dropdown">
+                </div>
+            </div>
+
+            <div class="dropdown" id="tierlantin-parent">
+                <button class="dropbtn">Tierlatins</button>
+                <div class="dropdown-content" id="tierlantin-dropdown">
+                </div>
+            </div>
+
+            <div class="dropdown" id="decoration-parent">
+                <button class="dropbtn">Decorations</button>
+                <div class="dropdown-content" id="decoration-dropdown">
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="weatherCast">
+                <h4 id="location"></h4>
+                <p id="temp"></p>
+                <p id="feels_like"></p>
+                <p id="weatherDescription"></p>
+                <p id="humidity"></p>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+                <button class="btn btn-info smallMargin" id="btn-weather-switch-previous" type="button">Previous HQ</button>
+                <button class="btn btn-info smallMargin" id="btn-weather-switch-next" type="button">Next HQ</button>
+            </div>
+            <hr>
+            <div id="canvasplacement"></div>
+        </div>
+    </div>
+
+    <!--right row-->
+    <div class="col-7 background-lightcoral" id="target">
+        <p id="information-bar" class="region"></p>
+        <div id="clothing-region" class="region"></div>
+        <div id="tierlantin-region" class="region"></div>
+        <div id="decoration-region" class="region"></div>
+        <div id="create-item-region" class="region"></div>
+    </div>
+
+    <div class="col-2 row" id="crud-region">
+        <div class="screen">
+            <input class="btn btn-info inputfieldwidth" type="file" id="myFile" size="5" accept="image/*">
+
+            <label id="current-specialty"></label> <br>
+            <label>Specialty:</label>
+
+            <input name='specialty' class="form-control" type="text" id="specialty">
+            <button class="btn btn-info smallVerticalMargin" id="upload-specialty">Add specialty</button> <br>
+            <button class="btn btn-warning" id="update-product">Edit product</button>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
